@@ -17,7 +17,7 @@ Example:
 ![repo secret](./repo-secrets-docker.png)
 
 # 🔑 Step 3: Add A Step to Your Job
-Add step below to your `ci.yml`:
+1. Add step below to your `ci.yml`:
 ```yml
 - name: Build and Push Docker Image
   uses: mr-smithers-excellent/docker-build-push@v4
@@ -28,6 +28,8 @@ Add step below to your `ci.yml`:
     password: ${{ secrets.DOCKER_PASSWORD }}
 ```
 
+2. Change `with:` -> `image: hiengmao/sample-live-chat-app` to your own docker hub account.
+
 # 🔑 Step 4: Check Docker Image on Docker Hub
 Go to [https://hub.docker.com/repositories/](https://hub.docker.com/repositories) to see your docker image you have been pushed.
 
@@ -36,3 +38,6 @@ Go to [https://hub.docker.com/repositories/](https://hub.docker.com/repositories
 2. Submit the screenshot to assignment
 
 >> Score: 10 points
+
+Example:
+![docker-hub](./docker-hub.png)
